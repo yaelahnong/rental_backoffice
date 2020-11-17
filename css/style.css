@@ -1,0 +1,335 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #F3F3F3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    height: 100%;
+}
+.container {
+    display: flex;
+    width: 100%;
+}
+.sidebar {
+    position: absolute;
+    width: 230px;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /* height: 100vh; */
+    background-color: #373a4e;
+    display: flex;
+    flex-direction: column;
+}
+.company-name {
+    margin: 0 auto;
+}
+.company-name h3 {
+    color: #FDFEFF;
+}
+.profile {
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.profile .avatar {
+    margin-bottom: 5px;
+}
+.profile .avatar img {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    background-size: cover;
+}
+.profile .name {
+    margin: 5px auto;
+    /* width: 100px; */
+    padding: 0 12px 0 12px;
+    border-radius: 12px;
+    background-color: #424659;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.profile .name p {
+    margin: 0;
+    font-size: 14px;
+    color: #FDFEFF;
+}
+.menu {
+    color: #FDFEFF;
+    border-top: 1.5px solid #3F4256;
+    display: flex;
+    align-items: center;
+}
+.menu:last-child {
+    border-bottom: 1.5px solid #3F4256;
+}
+.menu .menu-link {
+    text-decoration: none;
+    color: #FDFEFF;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+.menu .menu-link i {
+    margin-right: 5px;
+}
+.main-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 46px 12px 24px 242px;
+}
+.header {
+    min-height: 46px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding-left: 254px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+.header a {
+    text-decoration: none;
+    color: #101010;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+}
+.header span {
+    padding: 0 10px;
+}
+.main-content #menu-text, #logout-link {
+    margin: 0px;
+}
+.main-content #menu-text {
+    color: #101010;
+}
+.card {
+    display: flex;
+    flex: 1;
+    margin: 0 12px 24px 12px;
+    background-color: #fff;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.card-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.card-header a {
+    text-decoration: none;
+    color: #FDFEFF;
+    background-color: #373a4e;
+    padding: 6px 8px 6px 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+.table.table-odd, .table.table-even {
+    width: 100%;
+    text-align: center;
+}
+.table.table-odd thead, .table.table-even thead {
+    background-color: #373a4e;
+    color: #FDFEFF;
+}
+.table.table-odd thead th, .table.table-even thead th {
+    padding: 20px;
+}
+.table.table-odd tbody:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+.table.table-even tbody:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.table.table-odd tbody td {
+    padding: 15px;
+}
+.table.table-even tbody td {
+    padding: 20px;
+}
+/* .menu.active {
+    border-left: 3px solid #FBC900;
+} */
+
+.menu:hover {
+    border-left: 3px solid #FBC900;
+    background-color: rgba(66, 77, 89, 0.5);
+
+}
+
+/* .menu-link.active, .menu-link:hover {
+    color: #FBC900;
+} */
+
+.menu-link:hover {
+    color: #FBC900;
+}
+.head-nav {
+    display: flex;
+    padding: 15px 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-link.active {
+    color: #FBC900;
+}
+
+
+/* ADD FORM PAGE */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+.input-group label {
+    color: #101010;
+    font-weight: 500;
+}
+.input-group input {
+    margin-bottom: 15px;
+    padding: 5px 12px;
+    font-size: 16px;
+}
+.input-group textarea {
+    margin-bottom: 15px;
+}
+.input-group input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+.input-group input[type=file] {
+    padding: 5px 12px;
+    border: 1px solid #000;
+    font-size: 14px;
+    color: #101010;
+}       
+.input-group select {
+    width: 200px;
+    padding: 5px 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.input-info {
+    font-size: 14px;
+    color: red;
+    margin-bottom: 2px;
+}
+
+.btn-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    margin-top: 20px;
+}
+.btn-section a {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    height: 30px;
+    background-color: #eaeaea;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    width: 80px;
+    text-decoration: none;
+    color: #101010;
+    cursor: pointer;
+}
+.btn-section button {
+    padding: 0px;
+    height: 30px;
+    background-color: #373a4e;
+    border: none;
+    color: #FDFEFF;
+    font-size: 14px;
+    font-weight: 500;
+    width: 80px;
+}
+
+/* ADD FORM PAGE */
+
+/* OPERATORS PAGE */
+
+.fa-trash, .fa.fa-pencil-square-o, .fa.fa-info-circle {
+    font-size: 20px;
+}
+.fa.fa-trash {
+    color: red;
+}
+
+.fa.fa-pencil-square-o {
+    color: #ffc107;
+}
+
+.fa.fa-info-circle {
+    color: #3c8dbc;
+}
+
+/* END OF OPERATORS PAGE */
+
+/* DASHBOARD PAGE */
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+@media(min-width: 600px) {
+    .row {
+        flex-direction: row;
+    }
+}
+.card.card-h {
+    flex-direction: row;
+    /* padding: 0px; */
+    align-items: center;
+}
+.card.card-user {
+    order: 3;
+    background-color: #ffa000;
+    color: #FDFEFF;
+}
+.card.card-income {
+    order: 2;
+    background-color: #388e3c;
+    color: #FDFEFF;
+}
+.card.card-transaction {
+    order: 1;
+    background-color: #1976d2;
+    color: #FDFEFF;
+}
+.card.card-operator {
+    order: 4;
+    background-color: #d32f2f;
+    color: #FDFEFF;
+}
+.icon-description {
+    margin-left: 20px;
+    /* padding: 10px; */
+}
+.icon-number {
+    font-size: 18px;
+    font-weight: 600;
+}
+.icon-text {
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+/* END OF DASHBOARD PAGE */
