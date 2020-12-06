@@ -119,7 +119,7 @@
         <div class="row row-2">
             <div class="card transaction-chart">
                 <h2>Jumlah Transaksi Per Bulannya</h2>
-                <canvas id="transactionChart"></canvas>
+                <canvas id="transactionChart" height="375px"></canvas>
             </div>
         </div>
     </div>
