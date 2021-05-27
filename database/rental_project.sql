@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2020 at 09:25 AM
+-- Generation Time: May 27, 2021 at 09:57 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `rental_project`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_bank`
+--
+
+CREATE TABLE `tb_bank` (
+  `id_bank` int(11) NOT NULL,
+  `nama_bank` varchar(30) DEFAULT NULL,
+  `no_rekening` varchar(30) DEFAULT NULL,
+  `nama_pemilik` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_bank`
+--
+
+INSERT INTO `tb_bank` (`id_bank`, `nama_bank`, `no_rekening`, `nama_pemilik`) VALUES
+(1, 'MANDIRI', '123 456 789101112', 'MARINO IMOLA');
 
 -- --------------------------------------------------------
 
@@ -84,7 +104,52 @@ INSERT INTO `tb_detail_transaksi` (`id_detail_transaksi`, `kode_transaksi`, `id_
 (62, 'TRX-20201029081011-30', 5, '2020-10-29 08:00:14', '2020-10-30 08:00:14', NULL, NULL, NULL, 0, '2020-10-29 08:16:11', '2020-10-29 08:16:11'),
 (112, 'TRX-202010301610-63', 13, '2020-10-30 10:00:05', '2020-10-31 10:00:05', '2020-11-07 23:00:49', '570000', '1140000', 1, '2020-10-30 16:13:26', '2020-11-07 16:00:49'),
 (113, 'TRX-202010301610-113', 14, '2020-10-30 11:00:50', '2020-10-31 11:00:50', NULL, NULL, NULL, 0, '2020-10-30 16:27:05', '2020-10-30 16:27:05'),
-(114, 'TRX-202010301610-114', 14, '2020-10-30 10:30:03', '2020-10-31 10:30:03', NULL, NULL, NULL, 0, '2020-10-30 16:34:22', '2020-10-30 16:34:22');
+(114, 'TRX-202010301610-114', 14, '2020-10-30 10:30:03', '2020-10-31 10:30:03', NULL, NULL, NULL, 0, '2020-10-30 16:34:22', '2020-10-30 16:34:22'),
+(120, 'TRX-202012170412-115', 13, '2020-12-17 11:28:47', '2020-12-18 11:28:47', '2020-12-17 11:30:58', '0', '570000', 1, '2020-12-17 04:28:53', '2020-12-17 04:30:58'),
+(121, 'TRX-202012170412-121', 5, '2020-12-17 11:38:29', '2020-12-18 11:38:29', '2020-12-18 11:57:17', '67200', '739200', 1, '2020-12-17 04:38:40', '2020-12-18 04:57:17'),
+(123, 'TRX-202012170412-122', 5, '2020-12-18 11:59:38', '2020-12-19 11:59:38', '2020-12-19 14:42:36', '67200', '739200', 1, '2020-12-17 04:42:00', '2020-12-19 07:42:36'),
+(124, 'TRX-202012170412-124', 5, '2020-12-17 11:49:44', '2020-12-18 11:49:44', '2020-12-19 15:50:50', '672000', '1344000', 1, '2020-12-17 04:49:52', '2020-12-19 08:50:50'),
+(125, 'TRX-202012170412-125', 5, '2020-12-17 11:52:22', '2020-12-18 11:52:22', '2020-12-17 11:53:00', '0', '672000', 1, '2020-12-17 04:52:38', '2020-12-17 04:53:00'),
+(126, 'TRX-202012170412-126', 5, '2020-12-17 11:54:27', '2020-12-18 11:54:27', '2020-12-24 09:55:28', '1344000', '2016000', 1, '2020-12-17 04:54:44', '2020-12-24 02:55:28'),
+(127, 'TRX-202012240212-127', 5, '2020-12-17 09:56:38', '2020-12-18 09:56:38', '2020-12-24 14:03:44', '4032000', '4704000', 1, '2020-12-24 02:56:53', '2020-12-24 07:03:44'),
+(129, 'TRX-202012170512-128', 5, '2020-12-17 12:55:23', '2020-12-18 12:55:23', '2020-12-18 14:00:19', '0', '672000', 1, '2020-12-17 05:55:35', '2020-12-18 07:00:19'),
+(131, 'TRX-202012170612-130', 5, '2020-12-17 01:02:47', '2020-12-18 01:02:47', '2020-12-18 14:04:09', '1344000', '2016000', 1, '2020-12-17 06:03:02', '2020-12-18 07:04:09'),
+(151, 'TRX-202101102201-151', 24, '2021-01-11 09:36:03', '2021-01-12 09:36:03', NULL, NULL, NULL, 0, '2021-01-10 22:36:20', '2021-01-10 22:36:20'),
+(152, 'TRX-202101102201-152', 24, '2021-01-11 09:36:03', '2021-01-12 09:36:03', NULL, NULL, NULL, 0, '2021-01-10 22:36:20', '2021-01-10 22:36:20'),
+(153, 'TRX-202101102201-153', 24, '2021-01-11 09:36:03', '2021-01-12 09:36:03', NULL, NULL, NULL, 0, '2021-01-10 22:36:20', '2021-01-10 22:36:20'),
+(154, 'TRX-202101102201-154', 24, '2021-01-11 09:36:03', '2021-01-12 09:36:03', NULL, NULL, NULL, 0, '2021-01-10 22:36:20', '2021-01-10 22:36:20'),
+(155, 'TRX-202101102201-155', 24, '2021-01-11 09:36:03', '2021-01-12 09:36:03', NULL, NULL, NULL, 0, '2021-01-10 22:36:21', '2021-01-10 22:36:21'),
+(156, 'TRX-202101102201-156', 24, '2021-01-11 09:36:03', '2021-01-12 09:36:03', NULL, NULL, NULL, 0, '2021-01-10 22:36:21', '2021-01-10 22:36:21'),
+(157, 'TRX-202101102201-157', 24, '2021-01-11 09:36:03', '2021-01-12 09:36:03', NULL, NULL, NULL, 0, '2021-01-10 22:36:21', '2021-01-10 22:36:21'),
+(158, 'TRX-202101102201-158', 24, '2021-01-11 09:36:03', '2021-01-12 09:36:03', NULL, NULL, NULL, 0, '2021-01-10 22:36:22', '2021-01-10 22:36:22'),
+(159, 'TRX-202101102201-159', 24, '2021-01-11 09:36:03', '2021-01-12 09:36:03', NULL, NULL, NULL, 0, '2021-01-10 22:36:22', '2021-01-10 22:36:22'),
+(160, 'TRX-202101102201-160', 24, '2021-01-11 09:36:03', '2021-01-12 09:36:03', NULL, NULL, NULL, 0, '2021-01-10 22:36:22', '2021-01-10 22:36:22'),
+(167, 'TRX-202101102301-167', 24, '2021-01-11 09:58:56', '2021-01-12 09:58:56', NULL, NULL, NULL, 0, '2021-01-10 23:59:37', '2021-01-10 23:59:37'),
+(168, 'TRX-202101102301-168', 24, '2021-01-11 09:58:56', '2021-01-12 09:58:56', NULL, NULL, NULL, 0, '2021-01-10 23:59:37', '2021-01-10 23:59:37'),
+(169, 'TRX-202101102301-169', 24, '2021-01-11 09:58:56', '2021-01-12 09:58:56', NULL, NULL, NULL, 0, '2021-01-10 23:59:37', '2021-01-10 23:59:37'),
+(170, 'TRX-202101102301-170', 24, '2021-01-11 09:58:56', '2021-01-12 09:58:56', NULL, NULL, NULL, 0, '2021-01-10 23:59:37', '2021-01-10 23:59:37'),
+(171, 'TRX-202101102301-171', 24, '2021-01-11 09:58:56', '2021-01-12 09:58:56', NULL, NULL, NULL, 0, '2021-01-10 23:59:37', '2021-01-10 23:59:37'),
+(172, 'TRX-202101102301-172', 24, '2021-01-11 09:58:56', '2021-01-12 09:58:56', NULL, NULL, NULL, 0, '2021-01-10 23:59:38', '2021-01-10 23:59:38'),
+(177, 'TRX-202101130701-173', 13, '2021-01-13 09:59:10', '2021-01-14 09:59:10', NULL, NULL, NULL, 0, '2021-01-13 07:59:46', '2021-01-13 07:59:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_kebijakan`
+--
+
+CREATE TABLE `tb_kebijakan` (
+  `id_kebijakan` int(11) NOT NULL,
+  `kebijakan` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_kebijakan`
+--
+
+INSERT INTO `tb_kebijakan` (`id_kebijakan`, `kebijakan`) VALUES
+(1, 'Rental Requirements'),
+(2, 'Return the fuel as received');
 
 -- --------------------------------------------------------
 
@@ -106,6 +171,7 @@ CREATE TABLE `tb_mobil` (
   `plat_no_mobil` varchar(11) DEFAULT NULL,
   `status_mobil` int(1) DEFAULT NULL,
   `foto_mobil` text DEFAULT NULL,
+  `stok_mobil` int(3) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -114,17 +180,41 @@ CREATE TABLE `tb_mobil` (
 -- Dumping data for table `tb_mobil`
 --
 
-INSERT INTO `tb_mobil` (`id_mobil`, `nama_mobil`, `merk_mobil`, `jenis_mobil`, `transmisi_mobil`, `deskripsi_mobil`, `tahun_mobil`, `kapasitas_mobil`, `harga_mobil`, `warna_mobil`, `plat_no_mobil`, `status_mobil`, `foto_mobil`, `created_at`, `updated_at`) VALUES
-(2, 'Hiace NEW!', 'Toyota', 'MPV', 'Manual', 'Hiace dari Toyota', '2011', 8, '540000', 'Putih', 'F 123 AB', 1, 'toyota_hiace.png', '2020-03-21 20:42:40', '2020-08-04 10:44:43'),
-(5, 'Camry', 'Toyota', 'Sedan', 'Manual', 'Mobil dari Toyota', '2016', 4, '672000', 'Silver', 'B 1234 SE', 1, 'toyota_camry.png', '2020-03-22 16:03:33', '2020-11-07 15:13:22'),
-(6, 'Fortuner', 'Toyota', 'SUV', 'Manual', 'Mobil keluaran Toyota', '2014', 7, '735000', 'Putih', 'F 1452 ED', 1, 'fortuner.png', '2020-03-22 16:14:04', '2020-03-22 16:14:04'),
-(8, 'Pajero Sport', 'Mitsubishi', 'SUV', 'Manual', 'Hiace dari Toyota', '2013', 7, '645000', 'Silver', 'F 4452 BC', 1, 'pajero-sport.png', '2020-03-22 16:41:28', '2020-08-04 11:02:49'),
-(13, 'Jazz RS', 'Honda', 'Hatchback', 'Manual', 'Mobil keluaran Honda', '2011', 4, '570000', 'Biru', 'F 5613 ST', 1, 'Honda-Jazz-RS.jpg', '2020-03-24 12:26:41', '2020-08-04 10:18:43'),
-(14, 'Ertiga', 'Suzuki', 'MPV', 'Manual', 'Mobil dari Suzuki', '2015', 7, '680000', 'Putih', 'F 1523 BA', 1, 'ertiga.png', '2020-03-24 13:07:13', '2020-08-04 11:04:53'),
-(16, 'Yaris', 'Toyota', 'Hatchback', 'Manual', 'Camry from Toyota', '2015', 5, '650000', 'Putih', 'F 6233 BA', 1, 'yaris.jpg', '2020-03-24 13:30:04', NULL),
-(17, 'Alphard', 'Toyota', 'MPV', 'Automatic', 'Mobil keluaran Toyota', '2017', 7, '870000', 'Putih', 'F 1313 AB', 1, 'new-alphard-white-pearl.png', '2020-03-24 13:42:38', NULL),
-(18, 'Ayla', 'Daihatsu', 'Hatchback', 'Manual', 'Mobil keluaran Daihatsu', '2016', 5, '570000', 'Orange Met', 'F 4242 OA', 1, 'ayla.jpg', '2020-03-24 13:57:21', NULL),
-(23, 'Xenia-R', 'Daihatsu', 'MPV', 'Manual', 'Mobil keluarga handal', '2014', 7, '720000', 'Silver', 'F 2321 EZ', 1, 'xenia-R.jpg', '2020-11-07 15:33:37', '2020-11-07 15:53:48');
+INSERT INTO `tb_mobil` (`id_mobil`, `nama_mobil`, `merk_mobil`, `jenis_mobil`, `transmisi_mobil`, `deskripsi_mobil`, `tahun_mobil`, `kapasitas_mobil`, `harga_mobil`, `warna_mobil`, `plat_no_mobil`, `status_mobil`, `foto_mobil`, `stok_mobil`, `created_at`, `updated_at`) VALUES
+(2, 'Hiace NEW!', 'Toyota', 'MPV', 'Manual', 'Hiace dari Toyota', '2011', 8, '540000', 'Putih', 'F 123 AB', 1, 'toyota_hiace.png', 10, '2020-03-21 20:42:40', '2020-08-04 10:44:43'),
+(5, 'Camry', 'Toyota', 'Sedan', 'Manual', 'Mobil dari Toyota', '2016', 4, '672000', 'Silver', 'B 1234 SE', 0, 'toyota_camry.png', 10, '2020-03-22 16:03:33', '2020-12-18 07:08:14'),
+(6, 'Fortuner', 'Toyota', 'SUV', 'Manual', 'Mobil keluaran Toyota', '2014', 7, '735000', 'Putih', 'F 1452 ED', 0, 'fortuner.png', 10, '2020-03-22 16:14:04', '2020-12-18 07:09:14'),
+(8, 'Pajero Sport', 'Mitsubishi', 'SUV', 'Manual', 'Hiace dari Toyota', '2013', 7, '645000', 'Silver', 'F 4452 BC', 1, 'pajero-sport.png', 10, '2020-03-22 16:41:28', '2020-08-04 11:02:49'),
+(13, 'Jazz RS', 'Honda', 'Hatchback', 'Manual', 'Mobil keluaran Honda', '2011', 4, '570000', 'Biru', 'F 5613 ST', 1, 'Honda-Jazz-RS.jpg', 9, '2020-03-24 12:26:41', '2021-01-13 07:59:46'),
+(14, 'Ertiga', 'Suzuki', 'MPV', 'Manual', 'Mobil dari Suzuki', '2015', 7, '680000', 'Putih', 'F 1523 BA', 1, 'ertiga.png', 10, '2020-03-24 13:07:13', '2020-08-04 11:04:53'),
+(16, 'Yaris', 'Toyota', 'Hatchback', 'Manual', 'Camry from Toyota', '2015', 5, '650000', 'Putih', 'F 6233 BA', 1, 'yaris.jpg', 10, '2020-03-24 13:30:04', NULL),
+(17, 'Alphard', 'Toyota', 'MPV', 'Automatic', 'Mobil keluaran Toyota', '2017', 7, '870000', 'Putih', 'F 1313 AB', 1, 'new-alphard-white-pearl.png', 10, '2020-03-24 13:42:38', NULL),
+(18, 'Ayla', 'Daihatsu', 'Hatchback', 'Manual', 'Mobil keluaran Daihatsu', '2016', 5, '570000', 'Orange Met', 'F 4242 OA', 1, 'ayla.jpg', 10, '2020-03-24 13:57:21', '2020-12-16 18:53:34'),
+(23, 'Xenia-R', 'Daihatsu', 'MPV', 'Manual', 'Mobil keluarga handal', '2014', 7, '720000', 'Silver', 'F 2321 EZ', 1, 'xenia-R.jpg', 10, '2020-11-07 15:33:37', '2020-11-07 15:53:48'),
+(24, 'Avanza', 'Toyota', 'MPV', 'Manual', 'Mobil keluaran toyota', '2012', 5, '420000', 'Silver', 'F 1244 EQ', NULL, 'avanza-White-300x149.png', 0, '2021-01-10 21:28:27', '2021-01-11 00:10:16');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_syarat`
+--
+
+CREATE TABLE `tb_syarat` (
+  `id_syarat` int(11) NOT NULL,
+  `syarat` varchar(30) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_syarat`
+--
+
+INSERT INTO `tb_syarat` (`id_syarat`, `syarat`, `created_at`, `updated_at`) VALUES
+(1, 'Credit Card', NULL, '2021-01-10 21:07:58'),
+(2, 'Driver\'s License', NULL, NULL),
+(3, 'ID Card (KTP or Passport)', NULL, NULL),
+(11, 'Social Media Account', '2021-01-13 08:10:52', '2021-01-13 08:15:29');
 
 -- --------------------------------------------------------
 
@@ -166,7 +256,17 @@ INSERT INTO `tb_transaksi` (`kode_transaksi`, `id_user`, `tgl_order`, `total_pem
 ('TRX-20201029081011-30', 22, '2020-10-29 03:15:45', '672000', '2020-10-29 16:21:37', 1, 0, '2020-10-29 08:16:11', '2020-10-29 09:21:37'),
 ('TRX-202010301610-113', 17, '2020-10-30 11:27:05', '680000', '2020-10-30 23:27:15', 1, 0, '2020-10-30 16:27:05', '2020-10-30 16:27:15'),
 ('TRX-202010301610-114', 20, '2020-10-30 11:34:22', '680000', NULL, 0, 0, '2020-10-30 16:34:22', '2020-10-30 16:34:22'),
-('TRX-202010301610-63', 15, '2020-10-30 11:13:25', '570000', '2020-10-30 23:13:55', 1, 1, '2020-10-30 16:13:25', '2020-11-07 16:00:49');
+('TRX-202010301610-63', 15, '2020-10-30 11:13:25', '570000', '2020-10-30 23:13:55', 1, 1, '2020-10-30 16:13:25', '2020-11-07 16:00:49'),
+('TRX-202012170412-115', 15, '2020-12-17 11:28:52', '570000', '2020-12-17 11:29:50', 1, 1, '2020-12-17 04:28:53', '2020-12-17 04:30:58'),
+('TRX-202012170412-121', 15, '2020-12-17 11:38:40', '672000', '2020-12-17 11:38:46', 1, 1, '2020-12-17 04:38:40', '2020-12-18 04:57:17'),
+('TRX-202012170412-122', 15, '2020-12-18 11:59:45', '672000', '2020-12-17 11:42:07', 1, 1, '2020-12-17 04:42:00', '2020-12-19 07:42:36'),
+('TRX-202012170412-124', 15, '2020-12-17 11:49:51', '672000', '2020-12-17 11:50:21', 1, 1, '2020-12-17 04:49:51', '2020-12-19 08:50:50'),
+('TRX-202012170412-125', 15, '2020-12-17 11:52:38', '672000', '2020-12-17 11:52:52', 1, 1, '2020-12-17 04:52:38', '2020-12-17 04:53:00'),
+('TRX-202012170412-126', 15, '2020-12-24 11:54:37', '672000', '2020-12-17 11:54:50', 1, 1, '2020-12-17 04:54:44', '2020-12-24 02:55:28'),
+('TRX-202012170512-128', 15, '2020-12-17 12:55:35', '672000', '2020-12-17 12:55:47', 1, 1, '2020-12-17 05:55:35', '2020-12-18 07:00:19'),
+('TRX-202012170612-130', 15, '2020-12-17 01:03:02', '672000', '2020-12-17 13:03:09', 1, 1, '2020-12-17 06:03:02', '2020-12-18 07:04:09'),
+('TRX-202012240212-127', 15, '2020-12-24 09:56:52', '672000', '2020-12-17 11:57:34', 1, 1, '2020-12-24 02:56:52', '2020-12-24 07:03:44'),
+('TRX-202101130701-173', 15, '2021-01-13 02:59:45', '570000', NULL, 0, 0, '2021-01-13 07:59:45', '2021-01-13 07:59:45');
 
 -- --------------------------------------------------------
 
@@ -196,11 +296,11 @@ CREATE TABLE `tb_users` (
 --
 
 INSERT INTO `tb_users` (`id_user`, `email`, `password`, `api_token`, `reset_password_token`, `reset_password_expires`, `nama`, `no_telp`, `jenis_kelamin`, `alamat`, `foto`, `level`, `created_at`, `updated_at`) VALUES
-(5, 'marinoimola@gmail.com', '$2y$10$LKXu/FWnrK14lWMaOkBY/.fFyjRqa8ZV9Nf/ttj/FB9dPknQNhuDm', '1d0537cec13a2a51a852b0aeb502cd2cb2ad7a8c', NULL, NULL, 'Administrator', '085156252911', 'laki-laki', 'Jl.Cijahe no.1 rt02/01 kec.Bogor Barat kel.Curug Mekar 16113 Jawa Barat', 'ino.jpg', 'admin', '2020-03-19 20:14:12', '2020-11-17 06:57:56'),
+(5, 'marinoimola@gmail.com', '$2y$10$LKXu/FWnrK14lWMaOkBY/.fFyjRqa8ZV9Nf/ttj/FB9dPknQNhuDm', '847363be04335d83522ccca73912c8108d257078', NULL, NULL, 'Administrator', '085156252911', 'laki-laki', 'Jl.Cijahe no.1 rt02/01 kec.Bogor Barat kel.Curug Mekar 16113 Jawa Barat', 'ino.jpg', 'admin', '2020-03-19 20:14:12', '2021-05-27 05:39:45'),
 (7, 'user@localhost.com', '$2y$10$o6oe.odxRsoqmqexgVhFe.kJK4bBg8h2a/GfDtNo6p5au8vIssi4u', 'c8d9d9c44e5474bb716b04b8b1b9a0e675c41a2b', NULL, NULL, 'user', '0888', NULL, NULL, NULL, 'user', '2020-06-09 19:52:58', '2020-10-30 16:36:38'),
 (8, 'marinoimola27@gmail.com', '$2y$10$kZZW9cB8aqXqwVZtYTeNx.5nrfy5/dCZE7PPBVTYsdlj1Z3NZYHTa', 'ac39663d7e48f32344066ee8b61a9c72b693fab7', 'eyJpdiI6IkQ4NDZuVTZma1JOa2F2amNnNlZML1E9PSIsInZhbHVlIjoiTVZWNXIzSkdrMmNjYnNlQmpUQ3lxZz09IiwibWFjIjoiNzM2MTBlY2JkODc5OWI3ZGEyNzQxYzQ3ODYxNGYzZWUyY2MzOWZjYTg0M2NiYTNiYjI4NjliYWM3NWMwNmJkYyJ9', '2020-10-31 00:25:35', 'Marino Imola', '085156251911', 'laki-laki', 'Jl. Cijahe no.1 rt02/rw01 kec.Bogor Barat kel.Curug Mekar Kota Bogor 16113 Jawa Barat', 'user-1.jpg', 'operator', '2020-08-06 13:24:31', '2020-10-30 16:33:31'),
 (9, 'bambang@localhost.com', '$2y$10$Lyb9rIQ5av7k55cBCUPJXOSLF25Np9oLi9Mlv6JAa5oauHP.ORJYC', NULL, NULL, NULL, 'Bambang', '081284855532', 'laki-laki', 'Jl. Raya no.23 rt09/rw08 Kota Bogor', 'cr-v.jpg', 'user', '2020-07-09 12:08:17', '2020-07-09 12:08:25'),
-(15, 'soekirman@gmail.com', '$2y$10$HE4hrv/07OzplSN/GMaqSuEzhTz6lCXPESYsVlHM.ogHHhQSPvyH.', '717d900decb3c1922ec131273974adca3f5e2271', 'eyJpdiI6IlIwczJObU5RaWVtRWxOeE91UmFpRWc9PSIsInZhbHVlIjoiUy9lRThteTFpWTFYbFdVSFltL0Jjdz09IiwibWFjIjoiZTcyN2Q3MWQ5NWQ2MDViOGRkNGRhMDZjYjc5YzliM2M1NzI4ZjExYzAxMjViOTAzNTExOGNiZDQ5MzE3YTE0ZSJ9', NULL, 'Soekirman', '081284855532', NULL, NULL, NULL, 'user', '2020-07-22 22:19:36', '2020-11-07 15:47:42'),
+(15, 'soekirman@gmail.com', '$2y$10$HE4hrv/07OzplSN/GMaqSuEzhTz6lCXPESYsVlHM.ogHHhQSPvyH.', '6887e7cff229fa28a5f6a7f34948acb99c8d6ac1', 'eyJpdiI6IlIwczJObU5RaWVtRWxOeE91UmFpRWc9PSIsInZhbHVlIjoiUy9lRThteTFpWTFYbFdVSFltL0Jjdz09IiwibWFjIjoiZTcyN2Q3MWQ5NWQ2MDViOGRkNGRhMDZjYjc5YzliM2M1NzI4ZjExYzAxMjViOTAzNTExOGNiZDQ5MzE3YTE0ZSJ9', NULL, 'Soekirman', '081284855532', NULL, NULL, NULL, 'user', '2020-07-22 22:19:36', '2021-01-13 07:58:28'),
 (16, 'soekisoekijan@yahoo.com', '$2y$10$HRCN8Xayn3dBDWlqDLXnyeNvEu.UFRylFoyg6vJixVGeoqp6mw7wW', '1d9257a29a4bfe8103132374c6cb4e6415273058', NULL, NULL, 'Soekijan', '0895221123234', NULL, NULL, NULL, 'user', '2020-07-22 23:26:55', '2020-10-16 17:43:31'),
 (17, 'donirivaldi2@gmail.com', '$2y$10$WfJJ/lCvERqA0Nh0IeGdwetdMny9prdfqotK7A26.po5h6zdneRYW', '5b475a1ff26b19a7075c148ddf60899073fc193e', NULL, NULL, 'Doni Rivaldi', '089513561669', 'laki-laki', 'Tawakal, Cifor', 'IMG_1089.JPG', 'operator', '2020-08-06 13:24:46', '2020-10-30 16:26:28'),
 (18, 'marinoimola@yahoo.com', '$2y$10$cyqVhYMy74VYdFBw6rhhgeNJiWwK5JdhvcCP3vwyc6Y067Ju94Kfm', 'f30c65f5268fa745ed72fc812067b409ee8cba46', NULL, NULL, 'Marino Imola', '085156252911', NULL, NULL, NULL, 'user', '2020-08-01 17:29:11', '2020-08-01 17:29:12'),
@@ -214,7 +314,8 @@ INSERT INTO `tb_users` (`id_user`, `email`, `password`, `api_token`, `reset_pass
 (26, 'user@localhost.com', '$2y$10$F1QQHA.RXsAvSVtVXglUkugYZ683Bm389DvaV9xdeA3UkLTPJQANe', NULL, NULL, NULL, 'user', '1234567890', NULL, NULL, NULL, NULL, '2020-10-30 16:35:50', '2020-10-30 16:35:50'),
 (27, 'user@localhost.com', '$2y$10$ccs2O7AoXP7j8LsZHT.ngOMuXXBIKX34x80LaOE5ymjJVq2fPhbSm', NULL, NULL, NULL, 'user', '0881281421', NULL, NULL, NULL, NULL, '2020-10-30 16:36:38', '2020-10-30 16:36:38'),
 (28, 'marinoimola514@gmail.com', '$2y$10$.LKrJKcfRwynMQiAo0XyneSL6etbvGMeyWx0YpiipxU20pvJxz2Ri', '90a537c4228bc6cf4d1a31c65bb2c9aca49a83cf', NULL, NULL, 'Marino Imola', '085156252911', NULL, NULL, NULL, NULL, '2020-10-30 20:39:29', '2020-10-30 20:39:30'),
-(29, 'marinoimola704@yahoo.com', '$2y$10$TXfN3mG0RFGdKisUgK321eYhtHz4CxvrSoAikS7C9e6954hP/cVii', NULL, NULL, NULL, 'Marino Imola', '081284855532', 'laki-laki', 'Jl.Cijahe no.1 rt02/rw01 kel.Curug Mekar kec.Bogor Barat Bogor 16113', 'user-1.jpg', 'operator', '2020-11-03 07:16:02', NULL);
+(29, 'marinoimola704@yahoo.com', '$2y$10$TXfN3mG0RFGdKisUgK321eYhtHz4CxvrSoAikS7C9e6954hP/cVii', NULL, NULL, NULL, 'Marino Imola', '081284855532', 'laki-laki', 'Jl.Cijahe no.1 rt02/rw01 kel.Curug Mekar kec.Bogor Barat Bogor 16113', 'user-1.jpg', 'operator', '2020-11-03 07:16:02', NULL),
+(30, 'muhammadbaar@gmail.com', '$2y$10$2nu31xxw32UiwzLPwzi.teZRz.DG9Wy7Ws.NhwvStReMNILT4QiMu', 'e9b34b961a634fb99798b81253ddb40c2d6bcaf2', NULL, NULL, 'Muhammad Baar', '08128422421', NULL, NULL, NULL, NULL, '2020-12-18 07:07:49', '2020-12-18 07:07:49');
 
 -- --------------------------------------------------------
 
@@ -282,6 +383,12 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 
 --
+-- Indexes for table `tb_bank`
+--
+ALTER TABLE `tb_bank`
+  ADD PRIMARY KEY (`id_bank`);
+
+--
 -- Indexes for table `tb_denda`
 --
 ALTER TABLE `tb_denda`
@@ -294,10 +401,22 @@ ALTER TABLE `tb_detail_transaksi`
   ADD PRIMARY KEY (`id_detail_transaksi`);
 
 --
+-- Indexes for table `tb_kebijakan`
+--
+ALTER TABLE `tb_kebijakan`
+  ADD PRIMARY KEY (`id_kebijakan`);
+
+--
 -- Indexes for table `tb_mobil`
 --
 ALTER TABLE `tb_mobil`
   ADD PRIMARY KEY (`id_mobil`);
+
+--
+-- Indexes for table `tb_syarat`
+--
+ALTER TABLE `tb_syarat`
+  ADD PRIMARY KEY (`id_syarat`);
 
 --
 -- Indexes for table `tb_transaksi`
@@ -316,6 +435,12 @@ ALTER TABLE `tb_users`
 --
 
 --
+-- AUTO_INCREMENT for table `tb_bank`
+--
+ALTER TABLE `tb_bank`
+  MODIFY `id_bank` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `tb_denda`
 --
 ALTER TABLE `tb_denda`
@@ -325,19 +450,31 @@ ALTER TABLE `tb_denda`
 -- AUTO_INCREMENT for table `tb_detail_transaksi`
 --
 ALTER TABLE `tb_detail_transaksi`
-  MODIFY `id_detail_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
+  MODIFY `id_detail_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
+
+--
+-- AUTO_INCREMENT for table `tb_kebijakan`
+--
+ALTER TABLE `tb_kebijakan`
+  MODIFY `id_kebijakan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tb_mobil`
 --
 ALTER TABLE `tb_mobil`
-  MODIFY `id_mobil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_mobil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT for table `tb_syarat`
+--
+ALTER TABLE `tb_syarat`
+  MODIFY `id_syarat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tb_users`
 --
 ALTER TABLE `tb_users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
