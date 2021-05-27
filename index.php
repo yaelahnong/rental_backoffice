@@ -40,6 +40,7 @@
                 <div class="menu"><a class="menu-link" href="index.php?page=users"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Pelanggan</a></div>
                 <?php if($_SESSION['level'] == 'admin'): ?>
                 <div class="menu"><a class="menu-link" href="index.php?page=operators"><i class="fa fa-cogs fa-fw" aria-hidden="true"></i>Operator</a></div>
+                <div class="menu"><a class="menu-link" href="index.php?page=requirements"><i class="fa fa-book" aria-hidden="true"></i>Syarat & Ketentuan</a></div>
                 <?php endif; ?>
             </div>
         </div>
@@ -77,6 +78,14 @@
                         include 'operator_add.php';
                     } elseif ($_GET['page'] == "operator_delete") {
                         include 'operator_delete.php';
+                    } elseif ($_GET['page'] == "requirements") {
+                        include 'requirements.php';
+                    } elseif ($_GET['page'] == "requirement_add") {
+                        include 'requirement_add.php';
+                    } elseif ($_GET['page'] == "requirement_edit") {
+                        include 'requirement_edit.php';
+                    } elseif ($_GET['page'] == "requirement_delete") {
+                        include 'requirement_delete.php';
                     } else {
                         echo "error";
                     }

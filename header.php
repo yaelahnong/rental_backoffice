@@ -62,6 +62,16 @@
                     echo routeLink('index.php?page=operators', 'Operator');
                     echo '<span>></span>';
                     echo routeLink('', 'Tambah Operator');
+                } elseif ($_GET['page'] == "requirements") {
+                    echo routeLink('index.php?page=requirements', 'Syarat & Ketentuan');
+                } elseif ($_GET['page'] == "requirement_add") {
+                    echo routeLink('index.php?page=requirements', 'Syarat & Ketentuan');
+                    echo '<span>></span>';
+                    echo routeLink('', 'Tambah Syarat');
+                } elseif ($_GET['page'] == "requirement_edit") {
+                    echo routeLink('index.php?page=requirements', 'Syarat & Ketentuan');
+                    echo '<span>></span>';
+                    echo routeLink('', 'Ubah Syarat');
                 } else {
 
                 }

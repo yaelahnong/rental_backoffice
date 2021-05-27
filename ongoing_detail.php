@@ -224,7 +224,7 @@
                                         $denda = $biaya;
                                         
                                     } else if($overtimeHour >= 5) {
-                                        $biaya = $row['harga_mobil'] * 1;
+                                        $biaya = $row['harga_mobil'] * 2;
                                         $denda = $biaya;
                                     } else if($overtimeDay >= 1) {
                                         $biaya = $row['harga_mobil'] * $overtimeDay;

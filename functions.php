@@ -130,6 +130,52 @@
         return mysqli_affected_rows($conn);
     }
 
+    function tambahSyarat($data) {
+        global $conn;
+
+        $syarat = $_POST['syarat'];
+        $created_at = $_POST['created_at'];
+
+        $cekSyarat = mysqli_query($conn, "SELECT * FROM tb_syarat WHERE syarat = '$syarat'");
+
+        if(mysqli_fetch_assoc($cekSyarat)) {
+            echo "<script>alert('Syarat sudah ada!');</script>";
+            return false;
+        }
+
+        $query = "INSERT INTO tb_syarat VALUES('', '$syarat', '$created_at', null)";
+        mysqli_query($conn, $query);
+
+        return mysqli_affected_rows($conn);
+    }
+
+    function ubahSyarat($data) {
+        global $conn;
+
+        $id_syarat = $_POST['id_syarat'];
+        $syarat = $_POST['syarat'];
+        $updated_at = $_POST['updated_at'];
+
+        $cekSyarat = mysqli_query($conn, "SELECT * FROM tb_syarat WHERE syarat = '$syarat'");
+
+        if(mysqli_fetch_assoc($cekSyarat)) {
+            echo "<script>alert('Syarat sudah ada!');</script>";
+            return false;
+        }
+
+        $query = "UPDATE tb_syarat SET syarat = '$syarat', updated_at = '$updated_at' WHERE id_syarat = '$id_syarat'";
+        mysqli_query($conn, $query);
+
+        return mysqli_affected_rows($conn);
+    }
+
+    function hapusSyarat($id) {
+        global $conn;
+
+        mysqli_query($conn, "DELETE FROM tb_syarat WHERE id_syarat = $id");
+        return mysqli_affected_rows($conn);
+    }
+
     function tambahMobil($data) {
         global $conn;
         
@@ -143,7 +189,7 @@
         $harga_mobil = $_POST['harga_mobil'];
         $warna_mobil = $_POST['warna_mobil'];
         $plat_no_mobil = $_POST['plat_no_mobil'];
-        $status_mobil = $_POST['status_mobil'];
+        $stok_mobil = $_POST['stok_mobil'];
         $foto_mobil = $_POST['foto_mobil'];
         $created_at = $_POST['created_at'];
         
@@ -165,7 +211,7 @@
                         harga_mobil,
                         warna_mobil,
                         plat_no_mobil,
-                        status_mobil,
+                        stok_mobil,
                         foto_mobil, 
                         created_at
                         ) VALUES (
@@ -179,7 +225,7 @@
                         '$harga_mobil',
                         '$warna_mobil',
                         '$plat_no_mobil',
-                        '$status_mobil',
+                        '$stok_mobil',
                         '$foto_mobil',
                         '$created_at'
                     )";
@@ -205,7 +251,7 @@
         $harga_mobil = $_POST['harga_mobil'];
         $warna_mobil = $_POST['warna_mobil'];
         $plat_no_mobil = $_POST['plat_no_mobil'];
-        $status_mobil = $_POST['status_mobil'];
+        $stok_mobil = $_POST['stok_mobil'];
         $updated_at = $_POST['updated_at'];
         $foto_mobil_lama = $data['foto_mobil_lama'];
 
@@ -233,7 +279,7 @@
                     harga_mobil = '$harga_mobil',
                     warna_mobil = '$warna_mobil',
                     plat_no_mobil = '$plat_no_mobil',
-                    status_mobil = '$status_mobil',
+                    stok_mobil = '$stok_mobil',
                     foto_mobil = '$foto_mobil',
                     updated_at = '$updated_at'
                     WHERE id_mobil = '$id_mobil'
@@ -348,6 +394,7 @@
         $denda = $_POST['denda'];
         $total = $_POST['total'];
         $status = $_POST['status'];
+        
 
         $query1 = "UPDATE tb_transaksi
                     SET

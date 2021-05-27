@@ -142,8 +142,8 @@
                             <td><?= $row['plat_no_mobil']; ?></td>
                         </tr>
                         <tr>
-                            <td>Status Mobil</td>
-                            <td><?= $row['status_mobil']; ?></td>
+                            <td>Stok Mobil</td>
+                            <td><?= $row['stok_mobil']; ?></td>
                         </tr>
                         <tr>
                             <td>Created At</td>

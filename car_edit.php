@@ -75,9 +75,9 @@
                     <input type="text" id="warna_mobil" name="warna_mobil" placeholder="Warna Mobil" value="<?= $mobil['warna_mobil']; ?>">
                     <label for="plat_no_mobil">Plat Nomor Mobil</label>
                     <input type="text" id="plat_no_mobil" name="plat_no_mobil" placeholder="Plat Nomor Mobil" value="<?= $mobil['plat_no_mobil']; ?>">
-                    <label for="status_mobil">Status Mobil</label>
-                    <span class="input-info">*0 = Tidak tersedia,  1 = Tersedia</span>
-                    <input type="text" id="status_mobil" name="status_mobil" placeholder="Status Mobil" value="<?= $mobil['status_mobil']; ?>">
+                    <label for="Stok Mobil">Stok Mobil</label>
+                    <!-- <span class="input-info">*0 = Tidak tersedia,  1 = Tersedia</span> -->
+                    <input type="number" id="stok_mobil" name="stok_mobil" placeholder="Stok Mobil" value="<?= $mobil['stok_mobil']; ?>">
                     <label for="foto_mobil">Foto Mobil</label>
                     <input type="file" name="foto_mobil" id="foto_mobil">
                 </div>

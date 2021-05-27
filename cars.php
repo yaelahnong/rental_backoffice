@@ -30,7 +30,7 @@
                     <th>Nama</th>
                     <th>Harga</th>
                     <th>Foto</th>
-                    <th>Status</th>
+                    <th>Stok Mobil</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -44,7 +44,7 @@
                     <td><?= $row['merk_mobil'] . ' ' . $row['nama_mobil']; ?></td>
                     <td>Rp. <?= number_format($row['harga_mobil']); ?> / day</td>
                     <td><img src="img/<?= $row['foto_mobil']; ?>" width="100px" style="display: block; margin: 0 auto;"></td>
-                    <td><?= $row['status_mobil']; ?></td>
+                    <td><?= $row['stok_mobil']; ?></td>
                     <td>
                         <a href="index.php?page=car_edit&id=<?= $row['id_mobil'] ?>"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i></a>
                         <a href="index.php?page=car_detail&id=<?= $row['id_mobil'] ?>"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i></a>
